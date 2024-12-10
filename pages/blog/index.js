@@ -98,19 +98,6 @@ const Blog = ({ posts }) => {
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
-                    {process.env.NODE_ENV === "development" && mounted && (
-                      <div className="absolute top-0 right-0">
-                        <Button
-                          onClick={(e) => {
-                            deleteBlog(post.slug);
-                            e.stopPropagation();
-                          }}
-                          type={"primary"}
-                        >
-                          Delete
-                        </Button>
-                      </div>
-                    )}
                   </div>
                 ))}
             </div>
@@ -118,9 +105,6 @@ const Blog = ({ posts }) => {
         </div>
         {process.env.NODE_ENV === "development" && mounted && (
           <div className="fixed bottom-6 right-6">
-            <Button onClick={createBlog} type={"primary"}>
-              Add New Post +{" "}
-            </Button>
           </div>
         )}
       </>

@@ -22,7 +22,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       <Popover className="block tablet:hidden mt-5">
         {({ open }) => (
           <>
-            <div className="flex items-center justify-between p-2 laptop:p-0">
+            <div className=" flex items-center justify-between p-2 laptop:p-0">
               <h1
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
@@ -125,7 +125,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       >
         <h1
           onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+          className="ml-6 font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
           {name}.
         </h1>

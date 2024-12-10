@@ -24,10 +24,10 @@ const Resume = () => {
   }, []);
   return (
     <>
-      {process.env.NODE_ENV === "development" && (
+      {process.env.NODE_ENV === "development" &&(
         <div className="fixed bottom-6 right-6">
-          <Button onClick={() => router.push("/edit")} type={"primary"}>
-            Edit Resume
+          <Button onClick={() => window.location.href = "/resume.pdf"}>
+            Download Resume
           </Button>
         </div>
       )}
